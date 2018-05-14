@@ -42,8 +42,5 @@
             </div>
         <?php endforeach;?>
             
-            <div class='pagination'>
-                 <?php echo $this->pagination->create_links();?>
-            </div>
  </div>
  <?php $this->load->view('site/right.php');?>

@@ -156,6 +156,10 @@ class MY_Model extends CI_Model
             $this->db->where($input['where']);
         }
 
+        if ((isset($input['where_in'])) && $input['where_in'])
+        {
+            $this->db->where_in($input['where_in'][0], $input['where_in'][1]);
+        }
 
         //tim du lieu theo ten (like)
         if((isset($input['like'])) && $input['like'] )

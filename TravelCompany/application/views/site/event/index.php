@@ -1,10 +1,10 @@
 <?php
 	$first_time= $first[0]->ngay;
-	$first_time = strtotime($first_time);
-	$thang= date('M',$first_time);
-	$thu= date('D',$first_time);
-	$ngay= date('d',$first_time);
-	$nam= date('Y',$first_time);
+	$first_time1 = strtotime($first_time);
+	$thang= date('M',$first_time1);
+	$thu= date('D',$first_time1);
+	$ngay= date('d',$first_time1);
+	$nam= date('Y',$first_time1);
 ?>
 <div class="event-content">
 	<div class="event-content-image">
@@ -34,7 +34,7 @@
 				</div>
 				<div class="thoi-gian">
 
-					Thời gian: <span><?php echo get_thu($thu).", Ngày ".$ngay.", ".get_month($thang).", Năm ".$nam; ?></span>
+					Thời gian: <span><?php echo get_thu($thu).", Ngày ".$ngay.", ".get_month($thang).", Năm ".$nam." (".$first[0]->gio.")"; ?></span>
 				</div>
 				<div class="dia-diem">
 					<h4 style="font-size: 17px;">
@@ -59,11 +59,12 @@
 	</div>
 	<hr style="color: #EEEEEE;">
 	<div id="danh-sach-thoi-gian">
-		<h4>
+		<h4 style="margin-top: 10px;">
 			THỜI GIAN
 		</h4>
 		<br>
-		<ul>
+		<form action="" method="post">
+
 			<?php foreach($list_time as $row):?>
 				<?php
 				$thoi_gian= $row->ngay;
@@ -73,9 +74,11 @@
 				$d= date('d',$thoi_gian);
 				$y= date('Y',$thoi_gian); 
 				?>
-			<li><?php echo $D.", Ngày ".$d.", ".$m.", Năm ".$y; ?>
-			</li>
+				<input type="radio" name="pick_time" required>
+			<?php echo "<span style='font-size:19px;'>".$D.", Ngày ".$d.", ".$m.", Năm ".$y." (".$row->gio.")</span>"; ?>
+			<br>
 		<?php endforeach;?>
-		</ul>
+		<input type="submit" name="them-lich-trinh" value="THÊM VÀO LỊCH TRÌNH" style="margin-top: 20px;border-radius: 6px;background-color: red; color: white;font-size:17px;width: 200px;height: 50px; ">
+		</form>
 	</div>
 </div>

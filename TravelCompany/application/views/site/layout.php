@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php $this->load->view("site/head.php");?>
+	<?php 
+	header("Content-type: text/html; charset=utf8");
+	$this->load->view("site/head.php");?>
 </head>
 <body>
 	<?php $this->load->view("site/header.php");?>
