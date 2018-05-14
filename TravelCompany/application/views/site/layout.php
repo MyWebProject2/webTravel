@@ -10,7 +10,7 @@
 		<?php
 				$this->load->view($temp);
 		?>
-		<?php $this->load->view('site/right.php');?>
+		
 	</div>
 	<?php $this->load->view("site/footer.php");?>
 </body>

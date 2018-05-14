@@ -9,25 +9,20 @@
 		function __construct()
 		{
 			parent::__construct();
-			/*
-			$this->load->model('admin/Book_Model');
-			$this->load->model('admin/Type_Model');
-			$types = $this->Type_Model->get_list();
-			$this->data['types']= $types;
-			*/
+			$this->load->model('Event_Model');
 			
 		}
 		function index()
 		{	
-			/*
-			$total = $this->Book_Model->get_total();
+			
+			$total = $this->Event_Model->get_total();
 			$this->data['total']= $total;
 
 			$this->load->library('pagination');
 			$config = array();
 			$config['base_url']    = base_url('home/index');
 			$config['total_rows']  = $total;
-			$config['per_page']    = 12;
+			$config['per_page']    = 3;
 			$config['uri_segment'] = 3;
 			$config['next_link']   = "Trang kế";
 			$config['prev_link']   = "Trang trước";
@@ -40,7 +35,7 @@
 			$input= array();
 			$input['limit']= array($config['per_page'], $segment);
 
-			
+			/*
 			//tim kiem
 			$query = $this->input->get('query');
 			if($query)
@@ -48,14 +43,12 @@
 				$input['like'] = array('name', $query);
 				$input['or_like'] = array('author', $query);
 			}
-
-
-			$list= $this->Book_Model->get_list($input);
-			$this->data['list']= $list;
-
-			$this->data['message'] = $this->session->flashdata('message');
 			*/
 
+
+			$list= $this->Event_Model->get_list($input);
+			$this->data['list']= $list;
+			
 			$this->data['temp']= 'site/home/index';
 			$this->load->view('site/layout',$this->data);
 		}

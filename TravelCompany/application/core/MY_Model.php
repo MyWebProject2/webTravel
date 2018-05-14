@@ -193,7 +193,12 @@ class MY_Model extends CI_Model
         $result = $query->result();
         return $result;
     }
-
+    function get_first_record($key, $value)
+    {
+        $query = $this->db->query("SELECT * FROM ".$this->table." where ".$key."=".$value." ORDER BY ".$key." ASC LIMIT 1");
+        $result = $query->result();
+        return $result;
+    }
      /**
     * Lay tong so
     */

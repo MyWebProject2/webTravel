@@ -1,37 +1,36 @@
-<div id="central">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+<div id="central">                                                                                                                                   
             <div class="welcome">
-                <p>Dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor. invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur. </p>                                                                                                                                                                                                 
+                <p>WELCOME to 
+                    <br>
+                    <span style="margin-left: 50px;">Our Company</span></p>                                         
             </div>
             <div class="search">
                 <form action="#">
                     <span>Search</span> <input type="text"> <a href="#" id="ok"><img src="<?php echo public_url('site/template');?>/images/button.jpg" alt="" width="45" height="24"></a>
                 </form>
             </div>
+            <?php foreach($list as $row):?>
             <div class="block">
-                <a href="#"><img src="<?php echo public_url('site/template');?>/images/img1.jpg" alt="" width="180" height="126"></a>
-                <div>
-                    <h4>Lorem ipsum dolor sit amet</h4>
-                    <p>Dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor. invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                    <span class="price">$1500</span>
-                    <a href="#" class="more">more details</a>
+                <div class="block-img">
+                    <a href="<?php echo base_url('site/Event?id='.$row->id);?>"><img src="<?php echo public_url('site/template/img-event/'.$row->link_img);?>" alt="" width="180" height="150"></a>
+                </div>
+                <div class="block-content">
+                    <div class="block-content-title">
+                        <h4><?php echo $row->ten;?></h4>
+                    </div>
+                    <div class="block-content-address">
+                        <p><?php echo $row->dia_chi;?></p>
+                    </div>
+                    <div class="block-content-place">
+                        <span class="price"><?php echo $row->dia_diem;?></span>
+                    <a href="<?php echo base_url('site/event/index?id='.$row->id);?>" class="more">xem chi tiết</a>
+                    </div>
                 </div>
             </div>
-            <div class="block">
-                <a href="#"><img src="<?php echo public_url('site/template');?>/images/img2.jpg" alt="" width="180" height="126"></a>
-                <div>
-                    <h4>Lorem ipsum dolor sit amet</h4>
-                    <p>Dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor. invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                    <span class="price">$2500</span>
-                    <a href="#" class="more">more details</a>
-                </div>
+        <?php endforeach;?>
+            
+            <div class='pagination'>
+                 <?php echo $this->pagination->create_links();?>
             </div>
-            <div class="block">
-                <a href="#"><img src="<?php echo public_url('site/template');?>/images/img3.jpg" alt="" width="180" height="126"></a>
-                <div>
-                    <h4>Lorem ipsum dolor sit amet</h4>
-                    <p>Dolor sit amet, consetetur sadipscing elitr, seddiam nonumy eirmod tempor. invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
-                    <span class="price">$3500</span>
-                    <a href="#" class="more">more details</a>
-                </div>
-            </div>
-        </div>
+ </div>
+ <?php $this->load->view('site/right.php');?>
