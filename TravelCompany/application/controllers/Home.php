@@ -57,7 +57,11 @@
 				$input['where']['ngay <='] = $to;
 				$this->load->model('Time_Model');
 				$list_id_su_kien = $this->Time_Model->get_list($input);
-
+				if(empty($list_id_su_kien))
+				{
+					$this->session->set_flashdata('message','Không có kết quả phù hợp');
+					redirect();
+				}
 				
 				$array = array();
 				foreach ($list_id_su_kien as $row) {

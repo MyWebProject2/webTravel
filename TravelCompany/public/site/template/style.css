@@ -606,6 +606,13 @@ font-size:11px
 .them-lich-trinh a:hover{text-decoration:underline;color: #0000EE}
 
 #danh-sach-thoi-gian {
-	width: 800px;
 	padding-left: 50px;
+}
+.gioi-thieu-su-kien {
+	padding-left: 50px;
+	border-bottom: solid 1px;
+	border-color: #EEEEEE;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-right: 10px;
 }

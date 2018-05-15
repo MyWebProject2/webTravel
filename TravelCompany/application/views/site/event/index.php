@@ -58,10 +58,23 @@
 		</div>
 	</div>
 	<hr style="color: #EEEEEE;">
+	<div class="gioi-thieu-su-kien">
+		<h2>
+			GIỚI THIỆU
+		</h2>
+		<br>
+		<h3>
+			<?php echo $info->ten;?>
+		</h3>
+		<br><br>
+		<p style="font-family:Arial, Helvetica, sans-serif;">
+			<?php echo $info->gioi_thieu;?>
+		</p>
+	</div>
 	<div id="danh-sach-thoi-gian">
-		<h4 style="margin-top: 10px;">
+		<h2 style="margin-top: 10px;">
 			THỜI GIAN
-		</h4>
+		</h2>
 		<br>
 		<form action="" method="post">
 
