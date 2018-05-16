@@ -608,6 +608,9 @@ font-size:11px
 #danh-sach-thoi-gian {
 	padding-left: 50px;
 }
+#danh-sach-thoi-gian form {
+	line-height: 1.5;
+}
 .gioi-thieu-su-kien {
 	padding-left: 50px;
 	border-bottom: solid 1px;
@@ -615,4 +618,69 @@ font-size:11px
 	padding-top: 20px;
 	padding-bottom: 20px;
 	padding-right: 10px;
+}
+
+/*lich-trinh*/
+.lich-trinh-container{
+	width: 780px;
+	float: left;
+	margin-left: 15px;
+	margin-top: 60px;
+}
+.cac-su-kien {
+	margin-top: 10px;
+	width: 780px;
+}
+.heading-su-kien {
+	width: 780px;
+	height: 50px;
+	background-color: #EEEEEE;
+	text-align: center;
+}
+.heading-su-kien h4 {
+	margin-top: 10px;
+	color: #444444;
+}
+.tong-so-su-kien {
+	width: 200px;
+	float: left;
+}
+.heading-ten-su-kien {
+	width: 400px;
+	float: left;
+}
+.heading-ngay-gio {
+	width: 180px;
+	float: left;
+}
+
+.su-kien {
+	width: 780px;
+	margin-top: 10px;
+	background-color: #EEEEEE;
+	height: 120px;
+}
+.img-su-kien {
+	width: 200px;
+	float: left;
+	height: 120px;
+}
+.ten-dia-diem {
+	width: 390px;
+	float: left;
+	height: 120px;
+	margin-left: 10px;
+}
+.ngay-gio {
+	width: 175px;
+	float: left;
+	height: 120px;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.cac-thao-tac {
+	width: 780px;
+	height: 50px;
+	margin-top: 20px;
 }

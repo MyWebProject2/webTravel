@@ -51,7 +51,7 @@
 				$to = $this->input->post('to-date');
 				if($from < $to)
 				{
-				$input['select'] = array("id_su_kien");
+				$input['select'] = array("id_sukien");
 				$input['where'] = array();
 				$input['where']['ngay >='] = $from;
 				$input['where']['ngay <='] = $to;
@@ -65,7 +65,7 @@
 				
 				$array = array();
 				foreach ($list_id_su_kien as $row) {
-					array_push($array, $row->id_su_kien);
+					array_push($array, $row->id_sukien);
 				}
 
 				$input1['where_in']= array('id', $array);

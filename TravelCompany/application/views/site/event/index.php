@@ -47,7 +47,7 @@
 			</div>
 		</div>
 		<div class="them-lich-trinh">
-			<button style="margin-top: 20px;width: 200px;height: 50px;background-color: red;color: white;font-size: 17px;border-radius: 6px;" onclick="window.location.href='' ">
+			<button style="margin-top: 20px;width: 200px;height: 50px;background-color: red;color: white;font-size: 17px;border-radius: 6px;" onclick="window.location.href='<?php echo base_url('site/schedule/add?pick_time='.$first[0]->id_thoigian);?>' ">
 				THÊM VÀO LỊCH TRÌNH
 			</button>
 			<p style="margin-top: 10px;text-align: center;font-size: 17px;">
@@ -76,7 +76,7 @@
 			THỜI GIAN
 		</h2>
 		<br>
-		<form action="" method="post">
+		<form action="<?php echo base_url('site/schedule/add');?>" method="post">
 
 			<?php foreach($list_time as $row):?>
 				<?php
@@ -87,7 +87,7 @@
 				$d= date('d',$thoi_gian);
 				$y= date('Y',$thoi_gian); 
 				?>
-				<input type="radio" name="pick_time" required>
+				<input type="radio" name="pick_time" value="<?php echo $row->id_thoigian;?>" required>
 			<?php echo "<span style='font-size:19px;'>".$D.", Ngày ".$d.", ".$m.", Năm ".$y." (".$row->gio.")</span>"; ?>
 			<br>
 		<?php endforeach;?>

@@ -8,12 +8,12 @@
     </div>
     <ul id="menu">
       <li><a href="<?php echo base_url();?>">Home Page</a></li>
-      <li><a href="index2.html">Hot Tours</a></li>
-      <li><a href="index2.html">Services</a></li>
-      <li><a href="index2.html">News</a></li>
-      <li><a href="index2.html">Contacts</a></li>
+      <li><a href="#">Hot Tours</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="<?php echo base_url('site/schedule/index');?>">Schedule</a></li>
     </ul>
     <ul id="forum">
-      <li><a href="index.html">Forum</a></li>
+      <li><a href="#">Forum</a></li>
     </ul>
   </div>
