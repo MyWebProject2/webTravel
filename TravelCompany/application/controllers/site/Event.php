@@ -33,5 +33,14 @@ class Event extends MY_Controller
 		$this->load->view('site/layout',$this->data);
 	}
 
+	function view_map()
+	{
+		$id_sukien= $_GET['id_sukien'];
+		$info= $this->Event_Model->get_info($id_sukien);
+
+		$this->data['info'] = $info;
+		$this->load->view('site/event/map',$this->data);
+	}
+
 }
 ?>

@@ -27,7 +27,7 @@
 		<?php foreach($list as $row):?>
 		<div class="su-kien">
 			<div class="img-su-kien">
-				<img src="<?php echo public_url('site/template/img-event/'.$row->link_img); ?>" width= "200" height="120">
+				<a href="<?php echo base_url('site/event/index?id='.$row->id_sukien);?>" target = "_blank" title ="Xem chi tiết sự kiện"><img src="<?php echo public_url('site/template/img-event/'.$row->link_img); ?>" width= "200" height="120"></a>
 			</div>
 			<div class="ten-dia-diem">
 				<h4>

@@ -53,7 +53,7 @@
 			<p style="margin-top: 10px;text-align: center;font-size: 17px;">
 				<a href="#danh-sach-thoi-gian">Thay đổi thời gian</a>
 				<br> <br>
-				<a href="">Xem bản đồ</a>
+				<a href="<?php echo base_url('site/event/view_map?id_sukien='.$info->id_sukien);?>" target="_blank">Xem bản đồ</a>
 			</p>
 		</div>
 	</div>
@@ -67,10 +67,10 @@
 			<?php echo html_entity_decode($info->ten);?>
 		</h3>
 		<br>
-		<p style="margin-left: 50px"><iframe allowfullscreen="" frameborder="0" height="360" width="640" src= <?php 
-			if($info->link_clip != NULL) echo ($info->link_clip);
-			else echo '';?>></iframe>
+		<?php if($info->link_clip != NULL):?>
+		<p style="margin-left: 50px"><iframe allowfullscreen="" frameborder="0" height="360" width="640" src= <?php echo ($info->link_clip);?> ></iframe>
 		</p>
+		<?php endif;?>
 		<br>
 		<p style="font-family:Arial, Helvetica, sans-serif;">
 			<?php echo html_entity_decode($info->gioi_thieu);?>
