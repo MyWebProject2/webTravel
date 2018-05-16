@@ -31,13 +31,13 @@
 			</div>
 			<div class="ten-dia-diem">
 				<h4>
-					<?php echo $row->ten;?>
+					<?php echo html_entity_decode($row->ten);?>
 				</h4>
 				<p style="margin-top: 10px; color: red;">
-					<?php echo $row->dia_diem;?>
+					<?php echo html_entity_decode($row->dia_diem);?>
 				</p>
 				<p>
-					<?php echo $row->dia_chi;?>
+					<?php echo html_entity_decode($row->dia_chi);?>
 				</p>
 			</div>
 			<div class="ngay-gio">

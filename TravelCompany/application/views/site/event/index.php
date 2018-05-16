@@ -29,7 +29,7 @@
 			<div class="tieu-de-su-kien">
 				<div class="ten-su-kien">
 					<h3>
-						<?php echo $info->ten;?>
+						<?php echo html_entity_decode($info->ten);?>
 					</h3>
 				</div>
 				<div class="thoi-gian">
@@ -38,10 +38,10 @@
 				</div>
 				<div class="dia-diem">
 					<h4 style="font-size: 17px;">
-						<?php echo $info->dia_diem;?>
+						<?php echo html_entity_decode($info->dia_diem);?>
 					</h4>
 					<p style="color:#5B5B5B;">
-						<?php echo $info->dia_chi;?>
+						<?php echo html_entity_decode($info->dia_chi);?>
 					</p>
 				</div>
 			</div>
@@ -64,11 +64,16 @@
 		</h2>
 		<br>
 		<h3>
-			<?php echo $info->ten;?>
+			<?php echo html_entity_decode($info->ten);?>
 		</h3>
-		<br><br>
+		<br>
+		<p style="margin-left: 50px"><iframe allowfullscreen="" frameborder="0" height="360" width="640" src= <?php 
+			if($info->link_clip != NULL) echo ($info->link_clip);
+			else echo '';?>></iframe>
+		</p>
+		<br>
 		<p style="font-family:Arial, Helvetica, sans-serif;">
-			<?php echo $info->gioi_thieu;?>
+			<?php echo html_entity_decode($info->gioi_thieu);?>
 		</p>
 	</div>
 	<div id="danh-sach-thoi-gian">

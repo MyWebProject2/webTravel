@@ -68,7 +68,7 @@
 					array_push($array, $row->id_sukien);
 				}
 
-				$input1['where_in']= array('id', $array);
+				$input1['where_in']= array('id_sukien', $array);
 				$total = $this->Event_Model->get_total($input1);
 				
 				//$list= $this->Event_Model->get_list($input1);
