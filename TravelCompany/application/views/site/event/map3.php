@@ -104,7 +104,7 @@
 
         // Perform a nearby search.
         service.nearbySearch(
-            {location: pyrmont, radius: 500, type: ['restaurant']},
+            {location: pyrmont, radius: 500, type: ['']},
             function(results, status, pagination) {
               if (status !== 'OK') return;
 
@@ -148,19 +148,19 @@
   </head>
   <body>
     <div id="map"></div>   
-    <div id="right-panel">
-      <!--<form  action="<?php //echo base_url('site/event/view_map'); ?>" method="POST">
+    <!--<div id="right-panel">
+      <form  action="<?php //echo base_url('site/event/view_map'); ?>" method="POST">
         <select name="type">
           <option value="restaurant" selected="selected">Nhà hàng-Quán ăn</option>
           <option value="hotel">Khách sạn</option>
           <option value="cafe">Quán Cafe</option>
         </select>
         <input type="submit">
-      </form>-->
+      </form>
       <h2>Results</h2>
       <ul id="places"></ul></a>
       <button id="more">More results</button>
-    </div>
+    </div>-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQjNUuorBWOGnqKqweloJ3fzIQl7LgpP4&libraries=places&callback=initMap" async defer></script>
   </body>
 </html>

@@ -43,20 +43,30 @@
 			<div class="ngay-gio">
 				<table style="font-size: 15px;">
 					<tr>
-						<td><b>Ngày</b></td>
+						<td colspan="3"><b>Ngày</b></td>
 						<td>
 							<p style="color: blue;"><?php echo $row->ngay; ?></p>
 						</td>
 					</tr>
 					<tr>
-						<td><b>Thời gian</b></td>
+						<td colspan="3"><b>Thời gian</b></td>
 						<td>
 							<p style="color: red;"><?php echo $row->gio; ?></p>
 						</td>
 					</tr>
+
 					<tr>
-						<td colspan="2" style="text-align: right;">
-							<a href="<?php echo base_url('site/schedule/delete?id='.$row->id_lichtrinh);?>" title="Xóa khỏi lịch trình"><img src="<?php echo public_url('site/template/images/delete.png');?>" height="40" width="25"></a>
+						<td>
+							<a href="<?php echo base_url('site/event/view_map?id_sukien='.$row->id_sukien);?>" title="Tìm nhà hàng, quán ăn xung quanh" target="_blank"><img src="<?php echo public_url('site/template/images/restaurant.png');?>" height="35" width="30"></a>
+						</td>	
+						<td>
+							<a href="<?php echo base_url('site/event/view_map1?id_sukien='.$row->id_sukien);?>" title="Tìm khách sạn xung quanh" target="_blank"><img src="<?php echo public_url('site/template/images/hotel.png');?>" height="35" width="30"></a>
+						</td>
+						<td>
+							<a href="<?php echo base_url('site/event/view_map2?id_sukien='.$row->id_sukien);?>" title="Tìm quán cafe xung quanh" target="_blank"><img src="<?php echo public_url('site/template/images/cafe.png');?>" height="35" width="30"></a>
+						</td>				
+						<td style="text-align: right;">
+							<a href="<?php echo base_url('site/schedule/delete?id='.$row->id_lichtrinh);?>" title="Xóa khỏi lịch trình"><img src="<?php echo public_url('site/template/images/delete.png');?>" height="35" width="35"></a>
 						</td>
 					</tr>
 				</table>

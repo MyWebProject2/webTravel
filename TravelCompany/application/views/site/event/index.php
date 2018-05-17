@@ -51,9 +51,9 @@
 				THÊM VÀO LỊCH TRÌNH
 			</button>
 			<p style="margin-top: 10px;text-align: center;font-size: 17px;">
-				<a href="#danh-sach-thoi-gian">Thay đổi thời gian</a>
+				<a href="#danh-sach-thoi-gian">Chọn thời gian khác</a>
 				<br> <br>
-				<a href="<?php echo base_url('site/event/view_map?id_sukien='.$info->id_sukien);?>" target="_blank">Xem bản đồ</a>
+				<a href="<?php echo base_url('site/event/view_map3?id_sukien='.$info->id_sukien);?>" title="Xem bản đồ" target="_blank"><img src="<?php echo public_url('site/template/images/view-map.png');?>" height="60" width="100"></a>
 			</p>
 		</div>
 	</div>

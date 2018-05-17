@@ -13,7 +13,7 @@
                     <li><a href="#">Israel</a></li>
                     <li><a href="#">Italy</a></li>
                     <li><a href="#">Germany</a></li>
-                    <li><a href="#">Netherlands</a> <span class="new">- NEW</span></li>
+                    <li><a href="#">Viet Nam</a> <span class="new">- NEW</span></li>
                     <li><a href="#">Spain</a></li>
                     <li><a href="#">Russia</a> <span class="new">- NEW</span></li>
                     <li><a href="#">Peru</a></li>

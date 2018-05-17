@@ -37,10 +37,29 @@ class Event extends MY_Controller
 	{
 		$id_sukien= $_GET['id_sukien'];
 		$info= $this->Event_Model->get_info($id_sukien);
-
 		$this->data['info'] = $info;
 		$this->load->view('site/event/map',$this->data);
 	}
-
-}
+	function view_map1()
+	{
+		$id_sukien= $_GET['id_sukien'];
+		$info= $this->Event_Model->get_info($id_sukien);
+		$this->data['info'] = $info;
+		$this->load->view('site/event/map1',$this->data);
+	}
+		function view_map2()
+	{
+		$id_sukien= $_GET['id_sukien'];
+		$info= $this->Event_Model->get_info($id_sukien);
+		$this->data['info'] = $info;
+		$this->load->view('site/event/map2',$this->data);
+	}
+		function view_map3()
+	{
+		$id_sukien= $_GET['id_sukien'];
+		$info= $this->Event_Model->get_info($id_sukien);
+		$this->data['info'] = $info;
+		$this->load->view('site/event/map3',$this->data);
+	}
+}	
 ?>
